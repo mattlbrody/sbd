@@ -1,5 +1,4 @@
 .logo-default { height: 50px; }
-section#home { padding-top: 50px; }
 
 .is-stuck .navbar-brand {
     padding-top: 12px;
@@ -27,9 +26,13 @@ section#home { padding-top: 50px; }
 }
 
 .main-nav > li.is-active > a, .main-nav > li.current-menu-item > a, .main-nav > li:hover > a, .main-nav > li > a:hover {
-    color: black;
+    color: rgb(3,56,97);;
 }
 
 .main-header .social-icon:not([class*=scheme-]) a:hover, .main-nav > li > a:hover {
-    color: black;
+    color: rgb(3,56,97);;
 }
+
+section#home       { padding-top: 50px; }
+section#home h2    { line-height: 1; }
+section#home a.btn, #section6 input.btn { background-color: rgb(3,56,97); color: rgb(255, 255, 255); }
