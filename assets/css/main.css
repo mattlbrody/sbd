@@ -36,3 +36,7 @@
 section#home       { padding-top: 50px; }
 section#home h2    { line-height: 1; }
 section#home a.btn, #section6 input.btn { background-color: rgb(3,56,97); color: rgb(255, 255, 255); }
+
+.accordion-active-color-primary .active .accordion-title a {
+    color: #4DA043;
+}
