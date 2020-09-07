@@ -1,7 +1,7 @@
 <?php
 if($_POST)
 {
-	$to_email = "info@3rivers.com"; //Recipient email, Replace with own email here
+	$to_email = "info@my3rivers.com"; //Recipient email, Replace with own email here
 	$subject  = "New contact message form 3rivers.com";
 	
 	//check if its an ajax request, exit if not
