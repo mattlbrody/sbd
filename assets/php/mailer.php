@@ -2,7 +2,7 @@
 if($_POST)
 {
 	$to_email = "info@my3rivers.com"; //Recipient email, Replace with own email here
-	$subject  = "New contact message form 3rivers.com";
+	$subject  = "New contact message from 3rivers.com";
 	
 	//check if its an ajax request, exit if not
 	if(!isset($_SERVER['HTTP_X_REQUESTED_WITH']) AND strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest') {
