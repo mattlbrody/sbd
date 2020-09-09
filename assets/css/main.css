@@ -40,3 +40,9 @@ section#home a.btn, #section6 input.btn { background-color: rgb(3,56,97); color:
 .accordion-active-color-primary .active .accordion-title a {
     color: #4DA043;
 }
+
+.contact-form .btn {
+    background-color: rgb(3,56,97);
+    color: rgb(255, 255, 255);
+    margin-top:10px;
+}
