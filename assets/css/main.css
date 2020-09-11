@@ -47,6 +47,11 @@ section#home a.btn, #section6 input.btn { background-color: rgb(3,56,97); color:
     margin-top:10px;
 }
 
+@media screen and (min-width: 1200px) {
+    .main-nav > li:last-child.desktophidden {
+        display: none;
+    }
+}
 
 @media screen and (max-width: 1199px) {
     [data-mobile-nav-style=classic] .navbar-collapse, [data-mobile-nav-style=minimal] .navbar-collapse {
@@ -69,5 +74,23 @@ section#home a.btn, #section6 input.btn { background-color: rgb(3,56,97); color:
     .vc_row.pt-60.pb-100 .container .lqd-column.col-md-2 {
         text-align: center;
         margin-bottom: 40px;
+    }
+    .main-header .mainbar-row > [class^=col].mobilehidden {
+        display: none;
+    }
+    [data-mobile-nav-align=left] .navbar-collapse .header-module {
+        margin-bottom: 10px;
+    }
+    .social-icon i {
+        font-size: 20px;
+        color: black;
+    }
+    .main-header .col {
+        flex-basis: 75px;
+        -webkit-box-flex: 1;
+        flex-grow: 1;
+    }
+    .main-header .social-icon:not([class*=scheme-]) a, .main-nav > li > a {
+        color: rgba(0, 0, 0, 1);
     }
 }
