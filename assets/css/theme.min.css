@@ -4717,7 +4717,8 @@ body.search .no-results .search-form input[type=submit] { background-color: var(
   html[dir=rtl] [data-mobile-nav-trigger-alignment=right] .navbar-header .navbar-brand { -webkit-box-pack: end; justify-content: flex-end; }
   html[dir=rtl] [data-mobile-nav-trigger-alignment=left] .navbar-header .navbar-toggle { -webkit-box-pack: end; justify-content: flex-end; }
   html[dir=rtl] [data-mobile-nav-trigger-alignment=left] .navbar-header .navbar-brand { -webkit-box-pack: start; justify-content: flex-start; }
-  .main-header .header-module { display: none; }
+  /*  .main-header .header-module { display: none; }*/
+
   .navbar-collapse .header-module { display: -webkit-box; display: flex; margin-left: 0 !important; -webkit-box-align: start; align-items: flex-start; padding-left: 15px; padding-right: 15px; }
   .navbar-collapse .header-module:first-of-type { margin-top: 20px; }
   .navbar-header .header-module { display: -webkit-inline-box; display: inline-flex; position: static; -webkit-box-ordinal-group: 3; order: 2; }

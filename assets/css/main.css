@@ -46,3 +46,28 @@ section#home a.btn, #section6 input.btn { background-color: rgb(3,56,97); color:
     color: rgb(255, 255, 255);
     margin-top:10px;
 }
+
+
+@media screen and (max-width: 1199px) {
+    [data-mobile-nav-style=classic] .navbar-collapse, [data-mobile-nav-style=minimal] .navbar-collapse {
+        min-height: 320px;
+        overflow: hidden;
+    }
+    .main-header .mainbar-row > [class^=col] {
+        justify-content: center;
+    }
+    .text-right .header-module {
+        width: 100%;
+        background-color: white;
+    }
+    .main-header .social-icon {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .vc_row.pt-60.pb-100 .container .lqd-column.col-md-2 {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+}

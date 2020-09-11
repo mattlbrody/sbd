@@ -149,6 +149,9 @@
 											<a href="https://www.facebook.com/my3rivers" target="_blank"><i class="fa fa-facebook"></i></a>
 										</li>
 										<li>
+											<a href="https://www.twitter.com/my_3rivers" target="_blank"><i class="fa fa-twitter"></i></a>
+										</li>
+										<li>
 											<a href="https://www.instagram.com/my3rivers/" target="_blank"><i class="fa fa-instagram"></i></a>
 										</li>
 										<li>
@@ -738,13 +741,12 @@
 						<div class="lqd-column col-md-12">
 							
 							<ul class="lqd-custom-menu reset-ul inline-nav">
-								<li><a href="#">3rivers</a></li>
+								<li>&copy; 2020 3rivers, LLC. All rights reserved.  No part of this publication may be duplicated or repurposed without written permission from the publisher.</li>
 								<!-- <li>Email:<a href="mailto:info@my3rivers.com"> info@my3rivers.com</a></li> -->
 							</ul>
 							
 						</div><!-- /.col-md-6 -->
-						
-						
+
 					</div><!-- /.row -->
 				</div><!-- /.container -->
 			</section>
@@ -753,10 +755,17 @@
 		
 	</div><!-- /#wrap -->
 
-	<script src="./assets/vendors/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 	<script src="./assets/js/theme-vendors.js"></script>
 	<script src="./assets/js/theme.min.js"></script>
 	<script src="./assets/js/liquidAjaxMailchimp.min.js"></script>
+	<script>
+		// show social media on small devices
+		if(window.innerWidth <= 1199) {
+			$('.col.text-right').css("flex-direction", "row");
+
+		} 
+	</script>
 
 </body>
 </html>
