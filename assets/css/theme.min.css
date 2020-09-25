@@ -1296,7 +1296,7 @@ figure + .ld-cart-product-details { margin-left: 15px; }
 [data-shape-border="3"] .iconbox-icon-container { border-width: 3px; }
 
 /* Filling Styles */
-.iconbox-shadow, .iconbox-shadow-hover, .iconbox-bordered, .iconbox-filled { padding: 25px 10%; background-color: #fff; }
+.iconbox-shadow, .iconbox-shadow-hover, .iconbox-bordered, .iconbox-filled { padding: 25px 15%; background-color: #fff; }
 .iconbox-shadow.iconbox-inline, .iconbox-shadow.iconbox-side, .iconbox-shadow-hover.iconbox-inline, .iconbox-shadow-hover.iconbox-side, .iconbox-bordered.iconbox-inline, .iconbox-bordered.iconbox-side, .iconbox-filled.iconbox-inline, .iconbox-filled.iconbox-side { padding: 45px 5%; }
 
 .iconbox-semiround { border-radius: 5px; }
