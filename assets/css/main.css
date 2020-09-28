@@ -94,3 +94,36 @@ section#home a.btn, #section6 input.btn { background-color: rgb(3,56,97); color:
         color: rgba(0, 0, 0, 1);
     }
 }
+
+
+
+
+/*LANDING PAGE CSS*/
+/*font colors*/
+section#cta h1, #modules_of_learning h2, #previews h3 {color:#033861;}
+
+/*Getting Started Button and Text*/
+section#cta .get_started {height:300px; display:flex; align-items:center; justify-content: center;}
+section#cta .get_started a {width:100%; background-color: #033861;}
+section#cta .get_started a span {width:100%; display:block;}
+
+/*Overview Background Color*/
+section#overview {background:#FBFBFB;}
+
+/*Icon Color*/
+.iconbox { margin-bottom: 0.5em }
+.iconbox .iconbox-icon-container { color: #BCBFC5; }
+
+/*Icon Style*/
+#three_button_array .iconbox-icon-wrap { width: 100%; }
+#three_button_array .iconbox-icon-container i { border-style: solid; border-color: #ededed; border-size:1px; border-radius: 50%; padding: 20px; color: black; } 
+
+/*Learning Modules*/
+#modules_of_learning h3 { color: #575E6D; }
+#modules_of_learning p { color: #BCBFC5; }
+#modules_of_learning .iconbox { height:250px; }
+#modules_of_learning .iconbox-side .iconbox-icon-wrap { margin-top: 20px; }
+#modules_of_learning .get_started .btn-solid { margin-top:2em; background-color: rgb(3,56,97); color: rgb(255, 255, 255); }
+
+/*Previews */
+#previews img { width:100%; }
