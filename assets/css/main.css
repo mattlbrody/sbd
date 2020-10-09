@@ -100,7 +100,8 @@ section#home a.btn, #section6 input.btn { background-color: rgb(3,56,97); color:
 
 /*LANDING PAGE CSS*/
 /*font colors*/
-section#cta h1, #modules_of_learning h2, #previews h3 {color:#033861;}
+section#cta h1, #modules_of_learning h2, #previews h3, #three_button_array h3, #testimonials h2, .flickity-page-dots .dot.is-selected {color:#033861 !important;}
+#testimonials h5 { color: #575E6D }
 
 /*Getting Started Button and Text*/
 section#cta .get_started {height:300px; display:flex; align-items:center; justify-content: center;}
@@ -116,7 +117,10 @@ section#overview {background:#FBFBFB;}
 
 /*Icon Style*/
 #three_button_array .iconbox-icon-wrap { width: 100%; }
-#three_button_array .iconbox-icon-container i { border-style: solid; border-color: #ededed; border-size:1px; border-radius: 50%; padding: 20px; color: black; } 
+#three_button_array .iconbox-icon-container i { border-style: solid; border-color: #033861; border-size:1px; border-radius: 50%; padding: 20px; color: #4DA043; } 
+
+
+
 
 /*Learning Modules*/
 #modules_of_learning h3 { color: #575E6D; }
@@ -127,3 +131,5 @@ section#overview {background:#FBFBFB;}
 
 /*Previews */
 #previews img { width:100%; }
+
+

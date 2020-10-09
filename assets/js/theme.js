@@ -4543,7 +4543,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 		groupCells: true,
 		dragThreshold: 20,
 		wrapAround: false,
-		autoplay: false,
+		autoplay: true,
 		fullwidthSide: false,
 		navArrow: 1,
 		filters: false,
