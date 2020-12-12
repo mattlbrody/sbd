@@ -990,7 +990,7 @@ figure + .ld-cart-product-details { margin-left: 15px; }
 .btn-icon-border-thicker .btn-icon { border-width: 3px; }
 
 /* Button Styles */
-.btn-solid { background: var(--color-primary); color: #fff; }
+.btn-solid { background: #033861; color: #fff; }
 .btn-solid.color-secondary { background-color: #4fda90; border-color: #4fda90; }
 .btn-solid.color-secondary .btn-gradient-bg { background: -webkit-gradient(linear, left top, right top, from(var(--color-gradient-start-secondary)), to(var(--color-gradient-stop-secondary))); background: linear-gradient(to right, var(--color-gradient-start-secondary) 0%, var(--color-gradient-stop-secondary) 100%); }
 .btn-solid:hover { color: #fff; }
@@ -1025,7 +1025,8 @@ figure + .ld-cart-product-details { margin-left: 15px; }
 
 .btn-block { width: 100%; white-space: normal; }
 .btn-block > span { width: 100%; -webkit-box-pack: center; justify-content: center; }
-.btn-block:hover { -webkit-transform: none; transform: none; box-shadow: none; }
+.btn-block:hover { background-color: #033861;}
+/* .btn-block:hover { -webkit-transform: none; transform: none; box-shadow: none; } */
 
 .btn-gradient { border: none; }
 .btn-gradient > span { margin: 0 !important; }

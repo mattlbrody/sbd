@@ -96,12 +96,11 @@ section#home a.btn, #section6 input.btn { background-color: rgb(3,56,97); color:
 }
 
 
-
-
 /*LANDING PAGE CSS*/
 /*font colors*/
 section#cta h1, #modules_of_learning h2, #previews h3, #three_button_array h3, #testimonials h2, .flickity-page-dots .dot.is-selected {color:#033861 !important;}
 #testimonials h5 { color: #575E6D }
+.label {color:#033861 !important; font-weight: 800;}
 
 /*Getting Started Button and Text*/
 section#cta .get_started {height:300px; display:flex; align-items:center; justify-content: center;}
@@ -117,9 +116,10 @@ section#overview {background:#FBFBFB;}
 
 /*Icon Style*/
 #three_button_array .iconbox-icon-wrap { width: 100%; }
-#three_button_array .iconbox-icon-container i { border-style: solid; border-color: #033861; border-size:1px; border-radius: 50%; padding: 20px; color: #4DA043; } 
+#three_button_array .iconbox-icon-container i { border-style: solid; border-color: #033861; border-size: 1px; border-radius: 50%; padding: 20px; color: #4DA043; } 
 
-
+/* padding for section w/video */
+#cta {padding: 50px;}
 
 
 /*Learning Modules*/
@@ -132,4 +132,57 @@ section#overview {background:#FBFBFB;}
 /*Previews */
 #previews img { width:100%; }
 
+.contact-form input[type=submit], .contact-form button[type=submit] {background-color:#033861;}
 
+/* image overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #5a5c5e;
+}
+
+.liquid-img-group-container:hover .overlay {
+    opacity: 0.8;
+}
+
+.text {
+    color: rgb(32, 192, 40);
+    font-size: 20px;
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.inner {
+    float: left;
+    width: 50%;
+    padding: 0 3px;
+}
+
+.item-1 {
+    padding: 20px 4px 4px 4px;
+}
+
+.item-4 {
+    padding: 7px 4px;
+}
+
+.img1 {
+    padding: 40px 2px 5px 2px;
+}
+
+.img4 {
+    padding: 5px 2px 0 2px;
+}
