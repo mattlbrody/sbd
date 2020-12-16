@@ -234,3 +234,6 @@ li a, .dropbtn {
     text-align: center;
     padding: 50px;
 }
+.green h2 {
+    color:rgb(22, 133, 28) !important;
+}
