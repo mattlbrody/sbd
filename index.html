@@ -25,6 +25,7 @@
 	
 	<!-- Head Libs -->
 	<script async src="assets/vendors/modernizr.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 	
 </head>
 <body data-mobile-nav-trigger-alignment="right" data-mobile-nav-align="left" data-mobile-nav-style="minimal" data-mobile-nav-shceme="gray" data-mobile-header-scheme="gray" data-mobile-nav-breakpoint="1199">
@@ -245,7 +246,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="lqd-column col-sm-6">
-							<video width="100%" height="300" controls><source src="https://www.youtube.com/watch?time_continue=208&v=jEURpISHCpA&feature=emb_logo"></video>
+							<video width="100%" height="300" controls poster="https://my3rivers.com/assets/video/promo-thumbnail.jpg"><source src="https://my3rivers.com/assets/video/promo.mov"></video>
 						</div>
 						<div class="lqd-column col-sm-6">
 							<div class="get_started">
@@ -646,7 +647,7 @@
 						<header class="fancy-title text-center">
 							<h2>NOTIFY ME OF UPCOMING EVENTS AND UPDATES</h2>
 							<div class="contact-form contact-form-inputs-underlined contact-form-button-block">
-								<form action="mailer.php" method="post" novalidate="novalidate">
+								<form action="mailer.php" method="POST" novalidate="novalidate">
 									<div class="row">
 										<div class="col-md-6">
 											<input type="text" name="firstname" aria-required="true" aria-invalid="false" placeholder="First Name" required="">
@@ -681,8 +682,8 @@
 					
 					<div class="lqd-column col-md-6">
 						<h3>PREVIEW THE VIDEO CONTENT</h3>
-						<video width="100%" height="400" controls>
-							<source src="https://www.youtube.com/watch?time_continue=208&v=jEURpISHCpA">
+						<video width="100%" height="400" controls poster="https://my3rivers.com/assets/video/course-thumbnail.jpg">
+							<source src="https://my3rivers.com/assets/video/course.mov">
 						</video>
 					</div>
 					<div class="lqd-column col-md-6">
@@ -868,9 +869,9 @@
 		
 	</div><!-- /#wrap -->
 
-	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 	<script src="./assets/js/theme-vendors.js"></script>
 	<script src="./assets/js/theme.min.js"></script>
+	<script src="./assets/js/liquidAjaxContactForm.min.js"></script>
 	<script src="./assets/js/liquidAjaxMailchimp.min.js"></script>
 	<script>
 		// show social media on small devices
