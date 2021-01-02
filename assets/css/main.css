@@ -237,3 +237,17 @@ li a, .dropbtn {
 .green h2 {
     color:rgb(22, 133, 28) !important;
 }
+
+.blue {
+    background-color: #033861;
+    padding: 10px;
+    display: inline-block;
+}
+
+.navbutton > span {
+    padding: 10px 15px;
+}
+
+.contact-form input:focus {
+    color: grey;
+}

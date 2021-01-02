@@ -25,7 +25,8 @@
 	
 	<!-- Head Libs -->
 	<script async src="assets/vendors/modernizr.min.js"></script>
-	
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
 </head>
 <body data-mobile-nav-trigger-alignment="right" data-mobile-nav-align="left" data-mobile-nav-style="minimal" data-mobile-nav-shceme="gray" data-mobile-header-scheme="gray" data-mobile-nav-breakpoint="1199">
 	
@@ -59,7 +60,7 @@
 								</div><!-- /.navbar-header -->
 							</div><!-- /.col -->
 							
-							<div class="col">
+							<div class="col pr-0">
 								
 								<div class="collapse navbar-collapse" id="main-header-collapse">
 									
@@ -153,16 +154,18 @@
 														</li>
 													</ul>
 												</div><!-- /.header-module -->
-												
 											</div><!-- /.col -->
 										</li>
 									</ul><!-- /#primary-nav  -->
-								
 								</div><!-- /#main-header-collapse -->
 								
 							</div><!-- /.col -->
-						
-							<div class="col text-right mobilehidden">
+
+							<div id="navbutton" class="pt-40">
+								<a href="https://3rivers.teamplaybookbuilder.app/checkout/BC04CDA7D40A4BB3F43438D37F478408" target="_blank" class="btn btn-solid font-size-12 font-weight-bold ltr-sp-1 text-uppercase border-none btn-block navbutton"><span>Get Started</span></a>
+							</div>
+
+							<div class="col text-right mobilehidden p-0">
 
 								<div class="header-module">
 									<ul class="social-icon social-icon-sm">
@@ -518,22 +521,22 @@
 			</section>
 
 			<!-- free tool section -->
-			<div class="tool">
-				<div class="lqd-column col-md-12 contents">
-
-					<header class="fancy-title text-center green">
-						<h2>Interested in a free tool?</h2><h2>Try our Advisor2Business Leader Assessment</h2>
-					</header>
-
-				</div><!-- /.lqd-column col-md-12 -->
-				<img src="./assets/img/tool_new.png" alt="Interested in a free tool?">
-				<!-- button download -->
-				<div class="lqd-column col-md-6 col-md-offset-3 pt-30 pb-80">
-					<div class="get_started">
-						<a href="./assets/The Advisor2Business Leader Assessment.pdf" download="Leader Assessment" class="btn btn-solid font-size-16 font-weight-bold ltr-sp-1 text-uppercase border-none btn-block "><span>Download here</span></a>
+			<section class="vc_row pt-60 pb-30 ">
+				<div class="container">
+					<div class="row">
+						<div class="lqd-column col-md-12 contents">
+							<header class="fancy-title text-center green">
+								<h2>Interested in a free tool?</h2><h2>Try our Advisor2Business Leader Assessment</h2>
+							</header>
+						</div><!-- /.lqd-column col-md-12 -->
+						<img src="./assets/img/tool_new.png" alt="Interested in a free tool?">
+						<!-- button download -->
+						<div class="lqd-column col-md-8 col-md-offset-2 pt-30 pb-80">
+							<a href="./assets/The Advisor2Business Leader Assessment.pdf" download="Leader Assessment" class="btn btn-solid font-size-16 font-weight-bold ltr-sp-1 text-uppercase border-none btn-block "><span>Download here</span></a>
+						</div>
 					</div>
 				</div>
-			</div>
+			</section>
 			
 			<!-- CONTAINER 4 - ABOUT US -->
 			<section id="section4" class="vc_row pt-60 pb-30">
@@ -868,9 +871,9 @@
 		
 	</div><!-- /#wrap -->
 
-	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 	<script src="./assets/js/theme-vendors.js"></script>
 	<script src="./assets/js/theme.min.js"></script>
+	<script src="./assets/js/liquidAjaxContactForm.min.js"></script>
 	<script src="./assets/js/liquidAjaxMailchimp.min.js"></script>
 	<script>
 		// show social media on small devices
