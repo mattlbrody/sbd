@@ -251,3 +251,9 @@ li a, .dropbtn {
 .contact-form input:focus {
     color: grey;
 }
+
+@media screen and (min-width: 1199px) and (max-width: 1250px) {
+    .navbutton >span {
+        padding: 10px 9px;
+    }
+}
