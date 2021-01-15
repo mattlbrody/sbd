@@ -103,7 +103,7 @@
                                                     </span>
                                                 </a>
                                             </li>
-                                            <li class="drop_down">
+                                            <li class="drop_down" id="showDropdown">
                                                 <a class="dropbtn" href="./index.html#section4">
                                                     <span class="txt">Team</span>
                                                 </a>
@@ -123,6 +123,17 @@
                                                             <span class="submenu-expander">
                                                                 <i class="fa fa-angle-down"></i>
                                                             </span>
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a target="_blank" href="https://3rivers.teamplaybookbuilder.app/checkout/BC04CDA7D40A4BB3F43438D37F478408">
+                                                    <span class="link-icon"></span>
+                                                    <span class="link-txt">
+                                                        <span class="link-ext"></span>
+                                                        <span class="txt">
+                                                            Get Started
                                                         </span>
                                                     </span>
                                                 </a>
@@ -202,7 +213,7 @@
                             </div>
                             <div class="lqd-column col-md-6">
                                 <h3>Get to know Nancy Knous</h3>
-                                <p>Nancy Knous, CFP® is Managing Partner of 3rivers. A graduate of the University of Tennessee in Knoxville, Nancy earned her degree in Communications. She brings 30 years of experience as a financial planner. Her registrations, held with LPL Financial, include Series 7, 63, 24, and she is licensed in 25 states. She is also a SmartVestor Pro.</p>
+                                <p>Nancy Knous, CFP® is a Managing Partner of 3rivers. A graduate of the University of Tennessee in Knoxville, Nancy earned her degree in Communications. She brings 30 years of experience as a financial planner. Her registrations, held with LPL Financial, include Series 7, 63, 24, and she is licensed in 25 states. She is also a SmartVestor Pro.</p>
                                 <p>Nancy is a 2009 graduate of The Leadership Academy and has served on various boards to support Memphis. As a professor of Personal Finance at the University of Tennessee School of Pharmacy, she serves as a guide to wise investing and financial independence for future pharmacists. Nancy is also an accomplished speaker and has delivered talks at several national leadership conferences for LPL Financial.</p>
                                 <p><h5>How did you decide to build a team?</h5>"My team building was completely by default. The things I love and the people I love I can focus on for hours, but the things I hate, like organizing or details, I have very little time for. It was obvious early on that I needed help in the areas of my weakness."</p>
                                 <p>"As we grew, I added additional members who:<br>
@@ -210,7 +221,7 @@
                                     2. were excellent at doing things I hate or am horrible at<br>
                                     3. freed me up to excel and focus on my areas of strength"</p>
                                 <p>"To give you an example, I’m actually quite good at managing portfolios but I don’t like it, so I hired a client who was retiring from his CFO position at a major food distributor. I knew he would be good because when he was a client he called me every day to talk about various stocks and funds, their price, their outlook, etc. He drove me nuts, but he did very well in his own portfolio and we worked well together. When he told me he was retiring at age 60, I asked if he’d like to get a series 7 and come to work with me managing portfolios. He’s been here ever since and I believe is likely to stay well into his 80s. He loves the minutia and keeping up with the markets, the economy, etc."</p>
-                                <p><h5>Who needs this and why?</h5>"Our program is focused on the 3 parts of any business owner’s life:<br>
+                                <p><h5>Who needs 3rivers and why?</h5>"Our program is focused on the 3 parts of any business owner’s life:<br>
                                     1. Profit analysis - the cost of everything, the value of everything and going deeper than simply AUM to determine if you have an ever-growing profit.<br>
                                     2. Running your office efficiently (and with limited involvement from you). Is everything you do process driven, organized and systematic? Being buttoned up means you get to do what you’re good at and also means you get time off when you want or need it without worry. That last part is key.<br>
                                     3. Goose care - You’re a goose. I mean that lovingly: you lay golden eggs. No golden eggs come if you don’t take care of yourself. When I ask, “How are you?’” you must be able to answer with honesty and transparency. Identify any emotions you’re feeling that may need to be processed with your BFF, spouse, coach or therapist, etc. We are a finely-tuned machine. Do you need a tune-up?"</p>
@@ -228,7 +239,7 @@
                             <header class="fancy-title text-center">
                                 <h2>CONTACT US TO SPEAK AT YOUR NEXT EVENT</h2>
                                 <div class="contact-form contact-form-inputs-underlined contact-form-button-block">
-                                    <form action="mailer.php" method="post" novalidate="novalidate">
+                                    <form action="mailerbio.php" method="post" novalidate="novalidate">
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <input type="text" name="firstname" aria-required="true" aria-invalid="false" placeholder="First Name" required="">
@@ -286,13 +297,30 @@
 	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 	<script src="./assets/js/theme-vendors.js"></script>
 	<script src="./assets/js/theme.min.js"></script>
+	<script src="./assets/js/liquidAjaxContactForm.min.js"></script>
 	<script src="./assets/js/liquidAjaxMailchimp.min.js"></script>
 	<script>
 		// show social media on small devices
 		if(window.innerWidth <= 1199) {
 			$('.col.text-right').css("flex-direction", "row");
 
-		} 
+        } 
+        
+        var WIDTH_LIMIT = 1200;
+		let teamOpen = false;
+
+		var btn = document.getElementById("showDropdown");
+		btn.addEventListener('click', function () {
+			var windowWidth = window.innerWidth;
+			
+			if(!teamOpen && windowWidth < WIDTH_LIMIT) {
+				document.getElementById("dropdown_content").style.display = "block";
+				teamOpen = true;
+			} else if(teamOpen && windowWidth < WIDTH_LIMIT) {
+				document.getElementById("dropdown_content").style.display = "none";
+				teamOpen = false;
+			}
+		});
     </script>
     
     </body>

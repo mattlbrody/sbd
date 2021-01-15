@@ -104,7 +104,7 @@
                                                     </span>
                                                 </a>
                                             </li>
-                                            <li class="drop_down">
+                                            <li class="drop_down" id="showDropdown">
                                                 <a class="dropbtn" href="./index.html#section4">
                                                     <span class="txt">Team</span>
                                                 </a>
@@ -124,6 +124,17 @@
                                                             <span class="submenu-expander">
                                                                 <i class="fa fa-angle-down"></i>
                                                             </span>
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a target="_blank" href="https://3rivers.teamplaybookbuilder.app/checkout/BC04CDA7D40A4BB3F43438D37F478408">
+                                                    <span class="link-icon"></span>
+                                                    <span class="link-txt">
+                                                        <span class="link-ext"></span>
+                                                        <span class="txt">
+                                                            Get Started
                                                         </span>
                                                     </span>
                                                 </a>
@@ -203,11 +214,11 @@
                             </div>
                             <div class="lqd-column col-md-6">
                                 <h3>Get to know Judy VanArsdale</h3>
-                                <p>A Managing Partner of 3rivers, Judy Van Arsdale, began her career at McKesson Drug Company where she quickly moved from sales into management. She was awarded Sales Rep of the year as well as Vice President of the year during her tenure.  She also completed her Six Sigma Black Belt training during that time and today more than ever continues to use many of those skills learned in her Chicago-based wealth management firm, Lakeview Wealth Management.</p>
-                                <p>Today Judy is in the top 1% at LPL Financial having grown her book from $8M in AUM to $375M in just 15 years. Judy’s success has earned her a role on the LPL Advisor Council and the LPL Government Relations Advisor Board (serving as Board President).</p>
-                                <p>Judy was named as one of Forbes "Best in State" for 2020, Forbes "Top Women Advisors" for 2020 and has been an advocate and voice on behalf of the industry for many years.  She was a panelist at Barron’s Women’s Conference in 2016, was interviewed as one of only three advisors from LPL’s first Investor and Analyst Day in 2017, and was honored to testify in front of the Ways and Means Subcommittee about DOL Best interest. She has also presented and been a panelist at many LPL conferences and meetings.</p>
-                                <p><h5>How did you get where you are today?</h5>"I have always worked hard at everything I have attempted. That is the easy part, having passion for what I do and caring about the people I work with and serve is how I have gotten here today. In my opinion, when you treat those around you with compassion (even if it is having the tough conversations) building a mutual trust is how we grow as people. Everything grows from there."</p>
-                                <p><h5>Why are you three here together?</h5>"Just when I think maybe I should start to plan retirement they challenge me to be a part of something bigger than anything any of us could do individually.”</p>
+                                <p>A Managing Partner of 3rivers, Judy VanArsdale, began her career at McKesson Drug Company where she quickly moved from sales into management. She was awarded Sales Rep of the year as well as Vice President of the year during her tenure.  She also completed her Six Sigma Black Belt training during that time and today more than ever continues to use many of those skills learned in her Chicago-based wealth management firm, Lakeview Wealth Management.</p>
+                                <p>Today, Judy is in the top 1% at LPL Financial having grown her book from $8M in AUM to $375M in just 15 years. Judy’s success has earned her a role on the LPL Advisor Council and the LPL Government Relations Council (serving as Board President).</p>
+                                <p>Judy was named as one of Forbes "Best in State" for 2020, Forbes "Top Women Advisors" for 2020 and has been an advocate and voice on behalf of the industry for many years.  She was a panelist at Barron’s Women’s Conference in 2016, was interviewed as one of three advisors at LPL’s first Investor and Analyst Day in 2017, and was honored to testify in front of the Ways and Means Subcommittee about DOL Best Interest. She has also presented and been a panelist at many LPL conferences and meetings.</p>
+                                <p><h5>How did you get where you are today?</h5>"I have always worked hard at everything I have attempted. That is the easy part, having passion for what I do and caring about the people I work with and serve is how I have gotten here today. In my opinion, when you treat those around you with compassion and build mutual trust your world is open to countless opportunities."</p>
+                                <p><h5>Why are you three here together?</h5>"Just when I think maybe I should start to plan for retirement they challenge me to be a part of something bigger than anything any of us could do individually.”</p>
                             </div>
                         </div>
                     </div>
@@ -220,7 +231,7 @@
                             <header class="fancy-title text-center">
                                 <h2>CONTACT US TO SPEAK AT YOUR NEXT EVENT</h2>
                                 <div class="contact-form contact-form-inputs-underlined contact-form-button-block">
-                                    <form action="mailer.php" method="post" novalidate="novalidate">
+                                    <form action="mailerbio.php" method="post" novalidate="novalidate">
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <input type="text" name="firstname" aria-required="true" aria-invalid="false" placeholder="First Name" required="">
@@ -278,13 +289,30 @@
 	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 	<script src="./assets/js/theme-vendors.js"></script>
 	<script src="./assets/js/theme.min.js"></script>
+	<script src="./assets/js/liquidAjaxContactForm.min.js"></script>
 	<script src="./assets/js/liquidAjaxMailchimp.min.js"></script>
 	<script>
 		// show social media on small devices
 		if(window.innerWidth <= 1199) {
 			$('.col.text-right').css("flex-direction", "row");
 
-		} 
+        } 
+        
+        var WIDTH_LIMIT = 1200;
+		let teamOpen = false;
+
+		var btn = document.getElementById("showDropdown");
+		btn.addEventListener('click', function () {
+			var windowWidth = window.innerWidth;
+			
+			if(!teamOpen && windowWidth < WIDTH_LIMIT) {
+				document.getElementById("dropdown_content").style.display = "block";
+				teamOpen = true;
+			} else if(teamOpen && windowWidth < WIDTH_LIMIT) {
+				document.getElementById("dropdown_content").style.display = "none";
+				teamOpen = false;
+			}
+		});
     </script>
     
     </body>

@@ -103,7 +103,7 @@
                                                     </span>
                                                 </a>
                                             </li>
-                                            <li class="drop_down">
+                                            <li class="drop_down" id="showDropdown">
                                                 <a class="dropbtn" href="./index.html#section4">
                                                     <span class="txt">Team</span>
                                                 </a>
@@ -123,6 +123,17 @@
                                                             <span class="submenu-expander">
                                                                 <i class="fa fa-angle-down"></i>
                                                             </span>
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a target="_blank" href="https://3rivers.teamplaybookbuilder.app/checkout/BC04CDA7D40A4BB3F43438D37F478408">
+                                                    <span class="link-icon"></span>
+                                                    <span class="link-txt">
+                                                        <span class="link-ext"></span>
+                                                        <span class="txt">
+                                                            Get Started
                                                         </span>
                                                     </span>
                                                 </a>
@@ -202,8 +213,8 @@
                             <div class="lqd-column col-md-6">
                                 <h3>Get to know Lisa VanArsdale</h3>
                                 <p>A Managing Partner at 3rivers, Lisa VanArsdale literally grew up in the business of financial services. The Chicago native has worked at Lakeview Wealth Management since high school. Now a partner, Lisa currently leads operations for the firm while also supporting portfolio management and financial research. Lisa holds her series 7, 66 and has health and life insurance licenses.</p>
-                                <p>Lisa is a graduate of Elmhurst college (2011) with a major in finance and a minor in international business. Immediately following college, Lisa moved to New York City for an internship at NYC Mission Athlete Care where she cultivated a passion for marketing, promotion, and public relations.</p>
-                                <p>She is also active at LPL financial where she currently sits on the inclusion Council, Government Relations Council, Independent Advisor Institute Advisory Board and previously served on the Service and Operations Council. Lisa is also a sought-after speaker with standing-room only attendance and active post-event engagement from her audiences. Her presentations at LPL Focus in 2019, and also LPL Focus 2014 won her accolades from peers and leadership alike.</p>
+                                <p>Lisa is a graduate of Elmhurst College (2011) with a major in finance and a minor in international business. Immediately following college, Lisa moved to New York City for an internship at NYC Mission Athlete Care where she cultivated a passion for marketing, promotion, and public relations.</p>
+                                <p>She is also active at LPL Financial where she currently sits on the Advisor Inclusion Council, Government Relations Council, Independent Advisor Institute Advisory Board and previously served on the Service and Operations Council. Lisa is also a sought-after speaker with standing-room only attendance and active post-event engagement from her audiences. Her presentations at LPL Focus in 2019, and also LPL Focus 2014 won her accolades from peers and leadership alike.</p>
                                 <p>Lisa is a passionate advocate for business coaching and invests time with The Strategic Coach Program. She is a graduate of their Unique Edge, Team Tools, and Team Leader Programs.</p>
                                 <p><h5>What is the most rewarding aspect of being a mentor to other 2nd generation advisors?</h5>"I am fully aware that I would not be in the position I am today without the strong mentors I have in my life. From coaches, teachers, industry professionals to family and friends, I am truly blessed when it comes to the amount of advice and guidance I have been given. When I have asked how I can repay them for their time and expertise, the answer has always been to pay it forward, and 3rivers is my way of doing that. I want to share all the best practices and lessons I have learned for next-gen advisors to know their true potential and to know they aren’t alone."</p>
                                 <p><h5>What is your wish for the advisors that take the training?</h5>"My wish for advisors that take our 3rivers journey is that they find peace. I hope to reenergize that spark that made them decide to be an advisor in the first place. When you transition from being a financial advisor to a business owner, you wear so many hats and are pulled in so many directions that you start to fill your time taking care of your business. If your true passion is taking care of your clients, using our processes and perspectives will bring you back to your true passion and focusing on what brings you joy while taking control of your business in a way that you have the freedom to control your time, you finances and your energy."</p>
@@ -219,7 +230,7 @@
                             <header class="fancy-title text-center">
                                 <h2>CONTACT US TO SPEAK AT YOUR NEXT EVENT</h2>
                                 <div class="contact-form contact-form-inputs-underlined contact-form-button-block">
-                                    <form action="mailer.php" method="post" novalidate="novalidate">
+                                    <form action="mailerbio.php" method="post" novalidate="novalidate">
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <input type="text" name="firstname" aria-required="true" aria-invalid="false" placeholder="First Name" required="">
@@ -277,13 +288,30 @@
 	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 	<script src="./assets/js/theme-vendors.js"></script>
 	<script src="./assets/js/theme.min.js"></script>
+	<script src="./assets/js/liquidAjaxContactForm.min.js"></script>
 	<script src="./assets/js/liquidAjaxMailchimp.min.js"></script>
 	<script>
 		// show social media on small devices
 		if(window.innerWidth <= 1199) {
 			$('.col.text-right').css("flex-direction", "row");
 
-		} 
+        } 
+        
+        var WIDTH_LIMIT = 1200;
+		let teamOpen = false;
+
+		var btn = document.getElementById("showDropdown");
+		btn.addEventListener('click', function () {
+			var windowWidth = window.innerWidth;
+			
+			if(!teamOpen && windowWidth < WIDTH_LIMIT) {
+				document.getElementById("dropdown_content").style.display = "block";
+				teamOpen = true;
+			} else if(teamOpen && windowWidth < WIDTH_LIMIT) {
+				document.getElementById("dropdown_content").style.display = "none";
+				teamOpen = false;
+			}
+		});
     </script>
     
     </body>
