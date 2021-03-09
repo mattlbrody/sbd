@@ -93,9 +93,9 @@ section#home a.btn, #section6 input.btn { background-color: rgb(3,56,97); color:
     .main-header .social-icon:not([class*=scheme-]) a, .main-nav > li > a {
         color: rgba(0, 0, 0, 1);
     }
-    .drop_down:hover 
     .dropdown_content {
-        display: none !important;
+        margin-top: 0;
+        position: relative;
     }
 }
 
@@ -255,5 +255,12 @@ li a, .dropbtn {
 @media screen and (min-width: 1199px) and (max-width: 1250px) {
     .navbutton >span {
         padding: 10px 9px;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .dropdown_content {
+        margin-top: 0;
+        position: relative;
     }
 }

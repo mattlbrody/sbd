@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -107,11 +108,11 @@
 												</span>
 											</a>
 										</li>
-										<li class="drop_down">
-											<a class="dropbtn" href="#section4">
+										<li class="drop_down" id="showDropdown">
+											<a class="dropbtn">
 												<span class="txt">Team</span>
 											</a>
-											<div class="dropdown_content">
+											<div class="dropdown_content" id="dropdown_content">
 												<a href="./judy_bio.html">Judy VanArsdale</a>
 												<a href="./nancy_bio.html">Nancy Knous</a>
 												<a href="./lisa_bio.html">Lisa VanArsdale</a>
@@ -127,6 +128,17 @@
 														<span class="submenu-expander">
 															<i class="fa fa-angle-down"></i>
 														</span>
+													</span>
+												</span>
+											</a>
+										</li>
+										<li>
+											<a target="_blank" href="https://3rivers.teamplaybookbuilder.app/checkout/BC04CDA7D40A4BB3F43438D37F478408">
+												<span class="link-icon"></span>
+												<span class="link-txt">
+													<span class="link-ext"></span>
+													<span class="txt">
+														Get Started
 													</span>
 												</span>
 											</a>
@@ -160,9 +172,9 @@
 								
 							</div><!-- /.col -->
 
-							<div id="navbutton" class="pt-40">
+							<!-- <div id="navbutton" class="pt-40">
 								<a href="https://3rivers.teamplaybookbuilder.app/checkout/BC04CDA7D40A4BB3F43438D37F478408" target="_blank" class="btn btn-solid font-size-12 font-weight-bold ltr-sp-1 text-uppercase border-none btn-block navbutton"><span>Get Started</span></a>
-							</div>
+							</div> -->
 
 							<div class="col text-right mobilehidden p-0">
 
@@ -718,25 +730,25 @@
 									
 									<div class="carousel-item text-center col-xs-12">
 										<p class="font-size-18 lh-175 opacity-06">"Having 38 years of industry experience, with LPL Financial for 26 of those years, and as a member of the Executive Council at LPL, I have spent a considerable amount of time with other advisors sharing ideas and learning from one another at various conferences. I met these wonderful ladies through networking and educational opportunities, and they have become the Best of the Best. As we have become advocates of learning and sharing, our businesses have grown exponentially. They are true leaders in the industry and leaders in sharing ideas."</p>
-										<h5 class="mb-0">- Joan Valenti, CFP&reg;</h5>
+										<h5 class="mb-0 opacity-06" style="color:#828282">- Joan Valenti, CFP&reg;</h5>
 										<p class="font-size-14 font-weight-medium ltr-sp-1 opacity-04">Valenti Wealth Management, Farmington CT</p>
 									</div><!-- /.carousel-item -->
 
 									<div class="carousel-item text-center col-xs-12">
 										<p class="font-size-18 lh-175 opacity-06">"I have had the honor of knowing Lisa, Judy and Nancy for many years when I was an executive at LPL Financial. They are well respected amongst their peers as well as within our industry. Now I'm in their shoes working in a financial advisor practice and everything I have learned from them is now being put to use. All 3 women have a way of breaking down complex problems into solutions that are easy to incorporate into practical use. Whether it's engaging on a more personal level with clients or incorporating processes within our practice, they have helped me identify ways to be better and more efficient. On a personal level, they genuinely care and want to help all of us be better and that is what makes 3 Rivers special."</p>
-										<h5 class="mb-0">- Susan Fargo CFP&reg;</h5>
+										<h5 class="mb-0 opacity-06" style="color:#828282">- Susan Fargo, CFP&reg;</h5>
 										<p class="font-size-14 font-weight-medium ltr-sp-1 opacity-04">Chief Operating Officer, Symbio Financial Partners</p>
 									</div><!-- /.carousel-item -->
 									
 									<div class="carousel-item text-center col-xs-12">
 										<p class="font-size-18 lh-175 opacity-06">“With Judy, Nancy, and Lisa as your guides, you will have the confidence and clarity to take your business to the next level. You have made a wise decision by partnering with the proven processes and systems of the founders of 3rivers. Congratulations on your decision to enroll!” </p>
-										<h5 class="mb-0">Ken Van Leeuwen, CFP&reg;</h5>
+										<h5 class="mb-0 opacity-06" style="color:#828282">Ken Van Leeuwen, CFP&reg;</h5>
 										<p class="font-size-14 font-weight-medium ltr-sp-1 opacity-04">Princeton, New Jersey</p>
 									</div><!-- /.carousel-item -->
 									
 									<div class="carousel-item text-center col-xs-12">
 										<p class="font-size-18 lh-175 opacity-06">“I'm so excited for the launch of the 3rivers firm with Lisa, Judy and Nancy at the helm. They will be offering standard operating practices and coaching for advisors wanting to raise their game. They will be offering tools and resources to streamline an advisory practice, build strong teams and find freedom from the business” </p>
-										<h5 class="mb-0">- Susan Kay, Director&reg;</h5>
+										<h5 class="mb-0 opacity-06" style="color:#828282">- Susan Kay, Director&reg;</h5>
 										<p class="font-size-14 font-weight-medium ltr-sp-1 opacity-04">MFS Investment Management</p>
 									</div><!-- /.carousel-item -->
 									
@@ -856,7 +868,7 @@
 						<div class="lqd-column col-md-12">
 							
 							<ul class="lqd-custom-menu reset-ul inline-nav">
-								<li>&copy; 2020 3rivers, LLC. All rights reserved.  No part of this publication may be duplicated or repurposed without written permission from the publisher.</li>
+								<li>&copy; 2020 3rivers, LLC. All rights reserved.  No part of this publication may be duplicated or repurposed without written permission from the publisher.</li>
 								<!-- <li>Email:<a href="mailto:info@my3rivers.com"> info@my3rivers.com</a></li> -->
 							</ul>
 							
@@ -878,8 +890,23 @@
 		// show social media on small devices
 		if(window.innerWidth <= 1199) {
 			$('.col.text-right').css("flex-direction", "row");
+		};
 
-		} 
+		var WIDTH_LIMIT = 1200;
+		let teamOpen = false;
+
+		var btn = document.getElementById("showDropdown");
+		btn.addEventListener('click', function () {
+			var windowWidth = window.innerWidth;
+			
+			if(!teamOpen && windowWidth < WIDTH_LIMIT) {
+				document.getElementById("dropdown_content").style.display = "block";
+				teamOpen = true;
+			} else if(teamOpen && windowWidth < WIDTH_LIMIT) {
+				document.getElementById("dropdown_content").style.display = "none";
+				teamOpen = false;
+			}
+		});
 	</script>
 
 </body>
