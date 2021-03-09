@@ -264,3 +264,9 @@ li a, .dropbtn {
         position: relative;
     }
 }
+
+@media screen and (min-width: 1199px) and (max-width: 1360px) {
+    .social-icon li {
+        margin-right: 2px;
+    }
+}
